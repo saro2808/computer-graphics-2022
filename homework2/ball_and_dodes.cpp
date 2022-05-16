@@ -160,7 +160,7 @@ int main( void )
 	std::vector<glm::vec3> normalsarray[N];
 
 	for (int i = 0; i < N; ++i) {
-		loadOBJ("octa.obj", verticesarray[i], uvsarray[i], normalsarray[i]);
+		loadOBJ("dode.obj", verticesarray[i], uvsarray[i], normalsarray[i]);
 	}
 
 	// Load it into a VBO
