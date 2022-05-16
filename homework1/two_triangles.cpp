@@ -77,7 +77,7 @@ int main(void)
 	glBindVertexArray(VertexArrayID);
 
 	// Create and compile our GLSL program from the shaders
-	GLuint programID = LoadShaders("vertexShader.glsl", "fragmentShader.glsl");
+	GLuint programID = LoadShaders("TransformVertexShader.vertexshader.glsl", "TextureFragmentShader.fragmentshader.glsl");
 
 	// Get a handle for our "MVP" uniform
 	GLuint MatrixID = glGetUniformLocation(programID, "MVP");
@@ -85,12 +85,12 @@ int main(void)
 	// Our vertices. Tree consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
 	// A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
 	static const GLfloat g_vertex_buffer_data[] = {
-		 1.0f, 1.0f, 1.0f,
+		-1.0f,-1.0f,-1.0f,
 		 1.0f,-1.0f, 1.0f,
 		-1.0f, 1.0f, 1.0f,
-		 2.0f, 1.5f, 0.0f,
-		-1.5f,-1.0f, 0.0f,
-		-0.5f, 1.5f, 0.0f
+		-1.0f,-1.0f, 1.0f,
+		 1.0f,-1.0f,-1.0f,
+		-1.0f, 1.0f,-1.0f,
 	};
 
 	static const GLfloat g_color_buffer_data[] = {
@@ -183,4 +183,3 @@ int main(void)
 
 	return 0;
 }
-
