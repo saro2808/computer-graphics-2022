@@ -46,7 +46,7 @@ void computeMatricesFromInputs() {
 	float eps = 0.1f;
 
 	// Compute new orientation
-	horizontalAngle += mouseSpeed * eps;
+	//horizontalAngle += mouseSpeed * eps;
 
 	// Direction : Spherical coordinates to Cartesian coordinates conversion
 	glm::vec3 direction(
@@ -65,7 +65,7 @@ void computeMatricesFromInputs() {
 	// Up vector
 	glm::vec3 up = glm::cross(right, direction);
 
-	position += right * deltaTime * speed;
+	//position += right * deltaTime * speed;
 
 	float FoV = initialFoV;// - 5 * glfwGetMouseWheel(); // Now GLFW 3 requires setting up a callback for this. It's a bit too complicated for this beginner's tutorial, so it's disabled instead.
 
