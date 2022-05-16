@@ -77,7 +77,7 @@ int main(void)
 	glBindVertexArray(VertexArrayID);
 
 	// Create and compile our GLSL program from the shaders
-	GLuint programID = LoadShaders("TransformVertexShader.vertexshader.glsl", "TextureFragmentShader.fragmentshader.glsl");
+	GLuint programID = LoadShaders("vertexShader.glsl", "fragmentShader.glsl");
 
 	// Get a handle for our "MVP" uniform
 	GLuint MatrixID = glGetUniformLocation(programID, "MVP");
