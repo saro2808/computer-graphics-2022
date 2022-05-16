@@ -6,5 +6,5 @@ out vec4 color;
 
 void main() {
 	color.rgb = fragmentColor;
-	color.a = 0.5;
+	color.a = 0.4;
 }
